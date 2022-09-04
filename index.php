@@ -1,6 +1,6 @@
 <?php
 
-  // Função anti inject
+  // FUNÇÃO DE LIMPEZA DE POST
 
   function clean($valor){
     
@@ -11,20 +11,18 @@
     return $valor;
   }
 
-  // Função de soma
+  // FUNÇÃO DE ADIÇÃO
 
-  function soma($v1,$v2){
+  function div($v1,$v2){
     $result = $v1 + $v2;
 
-    return "= ".$result;
+    return $result;
   }
 ?>
 
-
-
 <?php
 
-  // Verificação e atribuição de valores
+  // ATRIBUIÇÃO DE VALORES ÀS VARIAVEIS
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -34,7 +32,7 @@
     if((empty($n1)) && (empty($n2))){
       $result = "Nenhum numero a ser calculado!!!"; 
     } else {
-      $result = soma($n1,$n2);
+      $result = div($n1,$n2);
     }
   }
 ?>
@@ -49,20 +47,36 @@
 </head>
 <body>
   
-<div class="title">
+<div class="title" align="center">
   <h1>🧮 Calculadora</h1>
+  <hr>
 </div>
 
 <section class="form_sec">
-<h2>➕ Soma</h2>
-  <div class="form">
-    <form method="POST">
-      <input name="n1" type="number" placeholder="Primeiro número"> +     
-      <input name="n2" type="number" placeholder="Segundo número">
-      <span class="text"><?php echo $result; ?></span>
-      <br><button type="submit">Concluir</button>
-    </form>
-  </div>
+
+<div align="center">
+  <h2>➕ Soma</h2>
+</div>  
+
+<div align="center">
+  <span class="text"><?php echo $result; ?></span>
+</div>
+
+<br>
+
+<div class="form" align="center">
+  <form method="POST">
+    <input name="n1" type="number" placeholder="Primeiro número"> + 
+    <input name="n2" type="number" placeholder="Segundo número">
+    <br>
+    <br><button type="submit">Concluir</button>
+  </form>
+</div>
+
+<br>
+<hr>
+
+<a href="page/div.php">proximo-> </a>
 </section>
 
 </body>
