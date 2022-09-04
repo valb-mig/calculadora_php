@@ -15,6 +15,7 @@
 
   function sub($v1,$v2){
     $result = $v1 - $v2;
+
     return $result;
   }
 ?>
@@ -37,44 +38,52 @@
 ?>
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
   <title>➖</title>
 </head>
+
 <body>
-  
-<div class="title" align="center">
-  <h1>🧮 Calculadora</h1>
-  <hr>
-</div>
 
-<section class="form_sec">
+<!-- MENU -->
+  <div class="menu_int" align="center">
+    <div class="menu" align="center">
 
-<div align="center">
-  <h2>➖ Subtração</h2>
-  <span class="text"><?php echo $result; ?></span>
-</div>
+      <div class="title">
+        <h1>🧮 Calculadora</h1>
+      </div>
 
-<br>
-
-<div class="form" align="center">
-    <form method="POST">
-      <input name="n1" type="number" placeholder="Primeiro número"> -     
-      <input name="n2" type="number" placeholder="Segundo número">
       <br>
-      <br><button type="submit">Concluir</button>
-    </form>
-</div>
+      <h2>➖ Subtração</h2>
+      <br>
 
-<br>
-<hr>
+      <div class="form">
+        <form method="POST">
+          <input name="n1" type="number" placeholder="Primeiro número"> + 
+          <input name="n2" type="number" placeholder="Segundo número">
+          <br>
+          <br><button type="submit">Concluir</button>
+        </form>
+      </div>
 
-<a href="div.php"><-anterior </a>  |  <a href="imc.php"> proximo-></a>
-</section>
+      <br>
+
+      <div class="rodape">
+        <a href="div.php"><-anterior </a> <a href="imc.php">proximo-></a>
+      </div>
+    </div>
+  </div> 
+<!-- FIM MENU -->
+  
+  <div align="center" class="valor">
+    <br>
+    <span class="text"><?php echo $result; ?></span>
+  </div>
 
 </body>
+
 </html>

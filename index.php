@@ -43,41 +43,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>➕</title>
 </head>
+
 <body>
+
+<!-- MENU -->
+  <div class="menu_int" align="center">
+    <div class="menu" align="center">
+
+      <div class="title">
+        <h1>🧮 Calculadora</h1>
+      </div>
+
+      <br>
+      <h2>➕ Adição</h2>
+      <br>
+
+      <div class="form">
+        <form method="POST">
+          <input name="n1" type="number" placeholder="Primeiro número"> + 
+          <input name="n2" type="number" placeholder="Segundo número">
+          <br>
+          <br><button type="submit">Concluir</button>
+        </form>
+      </div>
+
+      <br>
+
+      <div class="rodape">
+        <a href="page/div.php">proximo-> </a>
+      </div>
+    </div>
+  </div> 
+<!-- FIM MENU -->
   
-<div class="title" align="center">
-  <h1>🧮 Calculadora</h1>
-  <hr>
-</div>
-
-<section class="form_sec">
-
-<div align="center">
-  <h2>➕ Soma</h2>
-</div>  
-
-<div align="center">
-  <span class="text"><?php echo $result; ?></span>
-</div>
-
-<br>
-
-<div class="form" align="center">
-  <form method="POST">
-    <input name="n1" type="number" placeholder="Primeiro número"> + 
-    <input name="n2" type="number" placeholder="Segundo número">
+  <div align="center" class="valor">
     <br>
-    <br><button type="submit">Concluir</button>
-  </form>
-</div>
-
-<br>
-<hr>
-
-<a href="page/div.php">proximo-> </a>
-</section>
+    <span class="text"><?php echo $result; ?></span>
+  </div>
 
 </body>
+
 </html>
